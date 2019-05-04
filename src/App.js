@@ -14,7 +14,7 @@ class App extends Component {
     ]
   }
 
-  changeNameHandler = (event) => {
+  changeUserNameHandler = (event) => {
     this.setState({usernames: [
       event.target.value,
       'Carol',
@@ -29,15 +29,15 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <p className="App-intro">
+        <div className="App-intro">
           <UserInput 
-          changed={this.changeNameHandler} 
-          user={this.state.usernames[0]}/>
-          <UserOutput user={this.state.usernames[0]}/>
-          <UserOutput user={this.state.usernames[1]}/>
-          <UserOutput user={this.state.usernames[2]}/>
-          <UserOutput user={this.state.usernames[3]}/>
-        </p>
+          changed={this.changeUserNameHandler} 
+          userName={this.state.usernames[0]}/>
+          <UserOutput userName={this.state.usernames[0]}/>
+          <UserOutput userName={this.state.usernames[1]}/>
+          <UserOutput userName={this.state.usernames[2]}/>
+          <UserOutput userName={this.state.usernames[3]}/>
+        </div>
       </div>
     );
   }
